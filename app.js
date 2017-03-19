@@ -1,32 +1,36 @@
-var funnyLists = ['snake','bird',]
+var professionals = ["teachers",'nurses','doctors','developers','plumbers','farmers','polices','drivers','enginers','bellmans','chefs','politicians','artists','lawyers','architect'];
+   var prof; 
+function addLinks () {
+  for (var i = 0; i < professionals.length; i++) {
+    link = document.createElement("button");
+    link.textContent = professionals[i];
+    link.className = "professionals";
+    document.body.appendChild(link);
+    
+  };
+};
 
-    $("button").on("click", function() {
-      var person = $(this).attr("data-person");
-      var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
-        person + "&api_key=dc6zaTOxFJmzC&limit=10";
+addLinks();
 
-      $.ajax({
-          url: queryURL,
-          method: "GET"
-        })
-        .done(function(response) {
-          var results = response.data;
+$(".professionals").click(function() {
+	var prof = this.value()?
+console.log(this = );
+}); = 
 
-          for (var i = 0; i < results.length; i++) {
-            var gifDiv = $("<div class='item'>");
+var queryURL = "http://www.giphy.com/gifs=" + prof + "&y=&plot=short&r=json";
 
-            var rating = results[i].rating;
 
-            var p = $("<p>").text("Rating: " + rating);
+ $.ajax({
+           url: queryURL,
+	
+           method: "GET"
+         }).done(function(response) {
+           $("#a").text(JSON.stringify(response));
+         });
 
-            var personImage = $("<img>");
-            personImage.attr("src", results[i].images.fixed_height.url);
 
-            gifDiv.prepend(p);
-            gifDiv.prepend(personImage);
 
-            $("#gifs-appear-here").prepend(gifDiv);
-          }
-        });
 
-    });
+
+
+   
