@@ -4,15 +4,15 @@
 <head>
   <meta charset="utf-8">
   <title>Giphy API </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script
   src="https://code.jquery.com/jquery-3.2.0.min.js"
   integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I="
   crossorigin="anonymous"></script>
-
   <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="assets/style.css">
@@ -20,18 +20,58 @@
 </head>
 
 <body>
-  <div id="a">
-  </div>
-
-  <div id="gifs-appear-here">
-  </div>
-  <form id="add-professional">
-    <label for="professional-input">Add A Professional</label>
-    <input type="text" id="professional-input">
-    <!--this button will trigger our AJAX call -->
-    <input type="submit" id="find-professional" value="Submit">
-  </form>
-  
+  <div class="jumbotron"><h1> Have Some Fun With The Following Giphy!</h1></div>
+    <div class="container">
+    <div id="professionalbuttons">
+      <div class="row">
+        <div class="col-md-12">
+          <button class="btn btn-info Professional" data-name="Teacher">Teacher</button> 
+          <button class="btn btn-info Professional" data-name="Nurse">Nurse</button> 
+          <button class="btn btn-info Professional" data-name="Doctors">Doctors</button> 
+          <button class="btn btn-info Professional" data-name="Developers">Developers</button> 
+          <button class="btn btn-info Professional" data-name="Plumbers">Plumbers</button> 
+          <button class="btn btn-info Professional" data-name="Farmers">Farmers</button> 
+          <button class="btn btn-info Professional" data-name="Belmans">Belmans</button> 
+          <button class="btn btn-info Professional" data-name="Chefs">Chefs</button> 
+          <button class="btn btn-info Professional" data-name="Artist">Artist</button> 
+          <button class="btn btn-info Professional" data-name="Lawyers">Lawyers</button> 
+          <button class="btn btn-info Professional" data-name="Architects">Architects</button> 
+        </div>
+          <!-- <div class="col-md-12"> -->
+            <div id="prof"></div>
+                <h4>Add a Professional</h4>
+            <form id="gif-professional">
+              <label for="gif-input"></label>
+              <input type="text" id="gif-input"><br>
+    <!--button will be created here -->
+              <input type="submit" name="Button" class="btn btn-success" id="theButton" value="Submit"><br>
+            </form>
+          </div>
+    </div>
+  <div id="gifs-appear-here"></div>
+  <footer class="footer-distributed">
+      <div class="footer-left">
+      <h3>Moh Web<span>Dev</span></h3>
+      <p class="footer-links">
+        <a href="#">Home</a>
+      </p>
+      <p class="footer-company-name">Moh Kemal &copy; 2017</p>
+      <div class="footer-icons">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-github"></i></a>
+      </div>
+    </div>
+      <div class="footer-right">
+      <p>Contact Me At</p>
+      <form action="#" method="post">
+        <input type="text" name="email" placeholder="Email"/>
+        <textarea name="message" placeholder="Message"></textarea>
+        <button>Send</button>
+      </form>
+    </div>
+  </footer>
   <script type="text/javascript" src="app.js"></script>
 </body>
 </html>
