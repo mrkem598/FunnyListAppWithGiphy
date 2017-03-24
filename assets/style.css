@@ -1,8 +1,28 @@
+#professionalsbutton{
+  width: 100%;
+  border: 2px dotted red; 
+  border-radius:2px;
+    
+  
 
+}
+#prof{
+  float: left;
+}
+#buttonstyle{
+  float: right;
+  margin-top: 99px;
+}
+#theButton{
+  margin-left: 10px;
+}
 .jumbotron{
 	background-color: lightblue;
 	text-align: center;
 	font-size: 16px;
+}
+#gifs-appear-here{
+  float: left;
 }
 #a{
 	background-color: green;
@@ -43,35 +63,28 @@
 .footer-distributed h3 span{
   color:  #5383d3;
 }
-
 /* Footer links */
-
 .footer-distributed .footer-links{
   color:  #ffffff;
   margin: 0 0 10px;
   padding: 0;
 }
-
 .footer-distributed .footer-links a{
   display:inline-block;
   line-height: 1.8;
   text-decoration: none;
   color:  inherit;
 }
-
 .footer-distributed .footer-company-name{
   color:  #8f9296;
   font-size: 14px;
   font-weight: normal;
   margin: 0;
 }
-
 /* Footer social icons */
-
 .footer-distributed .footer-icons{
   margin-top: 40px;
 }
-
 .footer-distributed .footer-icons a{
   display: inline-block;
   width: 35px;
@@ -79,31 +92,24 @@
   cursor: pointer;
   background-color:  #33383b;
   border-radius: 2px;
-
   font-size: 20px;
   color: #ffffff;
   text-align: center;
   line-height: 35px;
-
   margin-right: 3px;
   margin-bottom: 5px;
 }
-
 /* Footer Right */
-
 .footer-distributed .footer-right{
   float: right;
 }
-
 .footer-distributed .footer-right p{
   display: inline-block;
   vertical-align: top;
   margin: 15px 42px 0 0;
   color: #ffffff;
 }
-
 /* The contact form */
-
 .footer-distributed form{
   display: inline-block;
 }
