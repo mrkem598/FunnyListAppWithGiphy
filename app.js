@@ -1,10 +1,10 @@
-// document ready function
+// once the document is ready do the following function
 $(document).ready(function() {
     var list = [];
 
-  //we will create a click function 
+  //creating click function to accept user input(click)
   $("button").on("click", function() {
-    //Declare my veriables called professionals
+    
     var professionals = $(this).data("name");
     //declaring the queryUrl
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + professionals + "&api_key=dc6zaTOxFJmzC&limit=10";
@@ -45,8 +45,7 @@ $(document).ready(function() {
     			$(this).attr("data-state", "still");
     		}
     	});
-       
-     
+         
  
     });
 
@@ -61,12 +60,11 @@ $(document).ready(function() {
     $("#professionalsbutton").append(newButton);
     //console.log("work");
     queryURL = "https://api.giphy.com/v1/gifs/search?q=" + professionalsbutton + "&api_key=dc6zaTOxFJmzC&limit=10";
-    //console.log(professionalsButton);
+    //ajax call to get the data from the url address
     $.ajax({
     	url: queryURL,
     	method: "GET"
-    })
-    .done(function(response) {
+    }).done(function(response) {
     	var results = response.data;
     	for(var i = 0; i< results.length; i++) {
     		var professionalsDiv = $("<div/>");
